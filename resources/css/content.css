@@ -1,0 +1,290 @@
+.main-content {
+  h1 {
+    @apply text-4xl lg:text-5xl;
+    + p:first-of-type {
+      @apply text-lg leading-normal;
+    }
+    .anchor {
+      display: none;
+    }
+  }
+
+  h2, h3, h4 {
+    @apply relative;
+  }
+
+  h2 {
+    &:not(:first-of-type) {
+      @apply border-t border-primary-200 border-dashed pt-12 dark:border-primary-500/20;
+    }
+  }
+
+  h2 > .anchor,
+  h3 > .anchor,
+  h4 > .anchor {
+    @apply absolute top-0 no-underline text-white dark:text-gray-900 opacity-0 block;
+    text-shadow: -1px -1px 0 theme('colors.primary.500'),
+    1px -1px 0 theme('colors.primary.500'),
+    -1px 1px 0 theme('colors.primary.500'),
+    1px 1px 0 theme('colors.primary.500');
+    transition: all .2s ease-in-out;
+    &:hover {
+      @apply text-primary-500;
+      text-shadow: none;
+    }
+  }
+
+  h2 {
+    > .anchor {
+      @apply -left-6 pr-2;
+    }
+    &:not(:first-of-type) > .anchor {
+      @apply top-12;
+    }
+    &:hover > .anchor {
+      @apply -left-8 opacity-100;
+    }
+  }
+
+  h3 {
+    > .anchor {
+      @apply -left-3 pr-2;
+    }
+    &:hover > .anchor {
+      @apply -left-5 opacity-100;
+    }
+  }
+
+  h4 {
+    > .anchor {
+      @apply -left-2 pr-2;
+    }
+    &:hover > .anchor {
+      @apply -left-4 opacity-100;
+    }
+  }
+
+
+  a svg.external {
+    @apply inline-block;
+    vertical-align: text-top;
+    color: rgba(0,0,0, .6);
+  }
+
+  ul, ol {
+    @apply mt-4 mb-6;
+  }
+
+  > ul:not([class*="list-"]) {
+    @apply pl-0 list-none mb-6 text-base;
+
+    li {
+      @apply relative pl-6 mb-2;
+
+      &::before {
+        @apply absolute inline-block;
+        content: url('/img/triangle-sky.svg');
+        top: 0;
+        left: 2px;
+      }
+
+      &:nth-child(3n+0)::before {
+        content: url('/img/triangle-pink.svg');
+      }
+
+      &:nth-child(3n+1)::before {
+        content: url('/img/triangle-purple.svg');
+      }
+
+      &:nth-child(3n+2)::before {
+        content: url('/img/triangle-teal.svg');
+      }
+    }
+  }
+
+  > ol {
+    @apply list-none text-base relative pl-0;
+    counter-reset: item;
+    z-index: 20;
+
+    > li {
+      @apply relative pl-10 mb-2;
+      z-index: 5;
+    }
+
+    > li::before {
+      @apply absolute top-0 left-0 mt-px flex items-center justify-center h-6 w-6 bg-primary-500 text-white rounded-full text-sm font-bold font-heading;
+      content: counter(item);
+      counter-increment: item;
+    }
+  }
+
+  > ol.ninja {
+    > li::before {
+      @apply bg-ninja-green;
+      z-index: -2;
+    }
+
+    > li::after {
+      @apply w-6 h-1 absolute top-2 left-0 right-0;
+      content: '';
+      z-index: -1;
+    }
+
+    > li:nth-child(1)::after {
+      @apply bg-ninja-red;
+    }
+
+    > li:nth-child(2)::after {
+      @apply bg-ninja-blue;
+    }
+
+    > li:nth-child(3)::after {
+      @apply bg-ninja-orange;
+    }
+
+    > li:nth-child(4)::after {
+      @apply bg-ninja-purple;
+    }
+  }
+
+  table {
+    @apply divide-y divide-gray-200 dark:divide-gray-700 ring-1 ring-gray-200 dark:ring-gray-700 rounded-lg overflow-hidden w-full my-6;
+
+    thead {
+      @apply bg-gray-50 dark:bg-gray-800;
+
+      th {
+        @apply px-3 py-2.5 text-left text-sm font-semibold text-gray-900 dark:text-white;
+      }
+    }
+
+    tbody {
+      @apply divide-y divide-gray-200 dark:divide-gray-700;
+
+      td {
+        @apply px-3 py-2 text-sm text-gray-700 leading-6 dark:text-gray-300;
+
+        code {
+          @apply whitespace-nowrap !bg-transparent text-xs md:text-sm font-semibold !text-primary-600 dark:!text-primary-500;
+        }
+      }
+    }
+  }
+}
+
+figure,
+.screenshot {
+  @apply bg-primary-100 border border-primary-300 dark:border-primary-400 dark:bg-primary-400/10 p-3 md:p-6 my-16 shadow-stack-sm dark:shadow-primary-900 rounded-lg relative;
+  @apply pb-6 md:pb-12;
+
+  img {
+    @apply shadow-lg rounded-lg mx-auto;
+  }
+}
+
+.caption,
+figure figcaption {
+  @apply bg-gray-900 rounded-md px-4 py-1.5 text-primary-200 text-sm inline-block antialiased absolute -right-2 -bottom-4 md:-right-4 md:bottom-2 dark:ring-1 dark:ring-white/10;
+
+  code {
+    font-size: 12px !important;
+    padding: 1px 2px !important;
+  }
+}
+
+.hint {
+  @apply relative bg-gray-50 px-7 pt-7 pb-5 my-20 text-gray-900 border border-gray-300 rounded-md;
+
+  .hint-title {
+    @apply font-sans uppercase bg-gray-700 rounded text-gray-300 inline-block py-1.5 px-2 leading-none absolute -left-4 -top-3 m-0 border-2 border-white -rotate-6 font-semibold tracking-wide dark:border-transparent transition duration-300 ease-in-out;
+  }
+
+  &:hover {
+    .hint-title {
+      @apply rotate-6;
+    }
+  }
+
+  &.tip {
+    @apply shadow-stack-primary-sm bg-white text-primary-800 border-primary-600 dark:bg-primary-800/20 dark:text-white dark:shadow-primary-900;
+
+    .hint-title {
+      @apply bg-primary-600 text-white ring-1 ring-primary-600;
+    }
+  }
+
+  &.info {
+    @apply shadow-stack-black border-gray-800 dark:bg-gray-400/10 dark:text-gray-400 dark:ring-gray-400/20 dark:shadow-gray-950;
+
+    .hint-title {
+      @apply text-white ring-1 ring-gray-800;
+    }
+  }
+
+  &.warning {
+    @apply shadow-warning-500 bg-warning-50 text-warning-900 border-warning-300 dark:bg-warning-400/10 dark:text-warning-500 dark:border-warning-400/20;
+
+    .hint-title {
+      @apply bg-warning-600 text-white ring-1 ring-warning-600;
+    }
+
+    a {
+      @apply text-warning-900 hover:text-warning-700 font-medium;
+    }
+
+    code:not(.torchlight) {
+      @apply text-primary-600 !important;
+    }
+  }
+
+  &.danger {
+    @apply shadow-danger-500 bg-danger-50 text-danger-900 border-danger-300 dark:bg-danger-400/10 dark:text-danger-400 dark:border-danger-400/20;
+
+    .hint-title {
+      @apply bg-danger-600 text-white ring-1 ring-danger-600;
+    }
+
+    code:not(.torchlight) {
+      @apply text-primary-600 !important;
+    }
+  }
+
+  &.watch {
+    @apply p-0 bg-transparent mb-32 block border-none shadow-none;
+
+    iframe {
+      @apply border shadow-yellow-300 p-1;
+    }
+
+    .hint-title {
+      @apply bg-sky-200;
+    }
+
+    .hint-content {
+      @apply relative;
+    }
+
+    p.caption {
+      @apply relative float-right -top-px bg-white right-0 bottom-0 font-mono border subpixel-antialiased italic text-black text-sm font-bold rotate-0 px-3 py-1 shadow-yellow-300;
+    }
+  }
+
+  &.best-practice {
+    @apply shadow-stack bg-sky-50 text-black border subpixel-antialiased;
+
+    .hint-title {
+      @apply bg-white;
+    }
+
+    code:not(.torchlight) {
+      @apply text-purple-500 !important;
+    }
+
+    a { @apply text-black font-bold; }
+  }
+
+  :not(.best-practice) code:not(.torchlight) {
+    @apply bg-transparent text-sky-500 font-bold mx-px text-sm;
+  }
+}

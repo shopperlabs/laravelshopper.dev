@@ -1,0 +1,17 @@
+@import 'base.css';
+@import 'torchlight.css';
+@import 'fonts.css';
+@import 'content.css';
+@import '_sidebar.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  display: none !important;
+}
+
+.heading-anchor {
+  @apply mr-2 inline-block align-baseline no-underline shadow-none dark:shadow-none;
+}

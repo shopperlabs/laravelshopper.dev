@@ -1,0 +1,42 @@
+.main-sidebar {
+  ::-webkit-scrollbar {
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    ::-webkit-scrollbar {
+      display: block;
+    }
+  }
+}
+
+.sidebar {
+  > ul {
+    @apply space-y-8;
+
+    li ul {
+      @apply mt-0 space-y-6 lg:space-y-2 border-l border-primary-100 dark:border-gray-800;
+    }
+
+    li {
+      a {
+        @apply block border-l-2 pl-4 text-sm -ml-px border-transparent hover:border-gray-200 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:border-gray-700;
+      }
+
+      &.active a {
+        @apply text-gray-900 border-primary-500 dark:text-white;
+      }
+    }
+  }
+
+  h5 {
+    @apply mb-5 lg:mb-3 font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide text-sm lg:text-xs;
+  }
+}
+
+.table-of-content {
+  .current {
+    @apply translate-x-2 font-medium text-primary-500;
+  }
+}

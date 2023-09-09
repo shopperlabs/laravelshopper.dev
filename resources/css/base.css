@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.gray.100');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.gray.300');
+  border-radius: 2px;
+}
+
+.dark {
+  ::-webkit-scrollbar-track {
+    background: theme('colors.gray.800');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: theme('colors.gray.700');
+  }
+}
