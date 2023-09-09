@@ -36,6 +36,15 @@ final class GithubFlavoredMarkdownConverter extends MarkdownConverter
                 'symbol' => '#',
                 'aria_hidden' => true,
             ],
+            'table' => [
+                'wrap' => [
+                    'enabled' => true,
+                    'tag' => 'div',
+                    'attributes' => [
+                        'class' => 'table-wrapper',
+                    ],
+                ]
+            ],
         ];
 
         $environment = new Environment($config);

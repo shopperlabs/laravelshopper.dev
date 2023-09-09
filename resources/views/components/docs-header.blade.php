@@ -69,7 +69,7 @@
                 </div>
                 <div class="lg:hidden px-4">
                     <div class="bg-gradient-to-r dark:from-gray-800 absolute h-full w-16 left-0 inset-y-0"></div>
-                    <button type="button" class="relative inline-flex items-center text-gray-500 dark:text-gray-400">
+                    <button @click="navIsOpen = true" type="button" class="relative inline-flex items-center text-gray-500 dark:text-gray-400">
                         <x-untitledui-menu-02 class="h-6 w-6" />
                     </button>
                 </div>

@@ -1,4 +1,6 @@
 .main-content {
+  overflow-wrap: break-word;
+
   h1 {
     @apply text-4xl lg:text-5xl;
     + p:first-of-type {
@@ -149,13 +151,15 @@
   }
 
   table {
-    @apply divide-y divide-gray-200 dark:divide-gray-700 ring-1 ring-gray-200 dark:ring-gray-700 rounded-lg overflow-hidden w-full my-6;
+    @apply divide-y divide-gray-200 dark:divide-gray-700 ring-1 ring-gray-200 dark:ring-gray-700 rounded-lg min-w-full my-0;
 
     thead {
-      @apply bg-gray-50 dark:bg-gray-800;
+      tr {
+        @apply overflow-hidden bg-gray-50 dark:bg-gray-800;
+      }
 
       th {
-        @apply px-3 py-2.5 text-left text-sm font-semibold text-gray-900 dark:text-white;
+        @apply px-3 py-2.5 text-left text-sm font-semibold text-gray-900 dark:text-white rounded-lg;
       }
     }
 
@@ -207,7 +211,7 @@ figure figcaption {
   }
 
   &.tip {
-    @apply shadow-stack-primary-sm bg-white text-primary-800 border-primary-600 dark:bg-primary-800/20 dark:text-white dark:shadow-primary-900;
+    @apply shadow-stack-primary-sm bg-white text-primary-800 border-primary-600 dark:bg-primary-800/20 dark:border-transparent dark:text-white dark:shadow-primary-900;
 
     .hint-title {
       @apply bg-primary-600 text-white ring-1 ring-primary-600;
@@ -223,7 +227,7 @@ figure figcaption {
   }
 
   &.warning {
-    @apply shadow-warning-500 bg-warning-50 text-warning-900 border-warning-300 dark:bg-warning-400/10 dark:text-warning-500 dark:border-warning-400/20;
+    @apply shadow-stack-warning-sm bg-warning-50 text-warning-900 border-warning-300 dark:bg-warning-400/10 dark:text-warning-500 dark:border-transparent dark:shadow-warning-950;
 
     .hint-title {
       @apply bg-warning-600 text-white ring-1 ring-warning-600;
@@ -239,7 +243,7 @@ figure figcaption {
   }
 
   &.danger {
-    @apply shadow-danger-500 bg-danger-50 text-danger-900 border-danger-300 dark:bg-danger-400/10 dark:text-danger-400 dark:border-danger-400/20;
+    @apply shadow-stack-danger-sm bg-danger-50 text-danger-900 border border-danger-300 dark:bg-danger-400/10 dark:text-danger-400 dark:border-transparent dark:shadow-danger-950;
 
     .hint-title {
       @apply bg-danger-600 text-white ring-1 ring-danger-600;
@@ -250,35 +254,15 @@ figure figcaption {
     }
   }
 
-  &.watch {
-    @apply p-0 bg-transparent mb-32 block border-none shadow-none;
-
-    iframe {
-      @apply border shadow-yellow-300 p-1;
-    }
-
-    .hint-title {
-      @apply bg-sky-200;
-    }
-
-    .hint-content {
-      @apply relative;
-    }
-
-    p.caption {
-      @apply relative float-right -top-px bg-white right-0 bottom-0 font-mono border subpixel-antialiased italic text-black text-sm font-bold rotate-0 px-3 py-1 shadow-yellow-300;
-    }
-  }
-
   &.best-practice {
-    @apply shadow-stack bg-sky-50 text-black border subpixel-antialiased;
+    @apply shadow-stack bg-sky-50 text-black border subpixel-antialiased border-sky-300 dark:bg-sky-400/10 dark:text-sky-400 dark:border-transparent dark:shadow-sky-950;
 
     .hint-title {
-      @apply bg-white;
+      @apply bg-white text-sky-500 ring-1 ring-sky-600 dark:bg-sky-600 dark:text-white;
     }
 
     code:not(.torchlight) {
-      @apply text-purple-500 !important;
+      @apply text-warning-500 !important;
     }
 
     a { @apply text-black font-bold; }

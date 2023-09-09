@@ -27,7 +27,19 @@ const setupNavCurrentLinkHandling = () => {
   });
 }
 
+const addTableWrapper = () => {
+  [...document.querySelectorAll('.main-content .table-wrapper')].forEach(wrapper => {
+    const parentDiv = document.createElement('div')
+    const table = wrapper.querySelector('table')
+    wrapper.classList.add('overflow-x-auto', 'my-6', '-mx-4')
+    parentDiv.setAttribute('class', 'inline-block min-w-full align-middle px-4 py-2')
+    parentDiv.appendChild(table)
+    wrapper.appendChild(parentDiv)
+  })
+}
+
 setupNavCurrentLinkHandling()
+addTableWrapper()
 
 window.toDarkMode = toDarkMode;
 window.toLightMode = toLightMode;

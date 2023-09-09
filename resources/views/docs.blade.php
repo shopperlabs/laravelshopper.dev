@@ -5,6 +5,13 @@
         :current-section="$currentSection"
     />
 
+    <x-sidebar
+        :navigation="$index"
+        :current-version="$currentVersion"
+        :versions="$versions"
+        :current-section="$currentSection"
+    />
+
     <div class="relative isolate">
         <svg class="absolute inset-0 opacity-75 -z-10 h-[10%] dark:hidden w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
             <defs>
@@ -42,29 +49,15 @@
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-12 lg:max-w-none lg:py-20 lg:pl-8 lg:pr-0 xl:px-10">
                 <section class="docs_main max-w-prose lg:max-w-none">
                     @unless ($currentVersion === 'main' || version_compare($currentVersion, DEFAULT_VERSION) >= 0)
-                        <x-callout color="warning">
-                            <x-slot:type>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                                </svg>
-                                Warning
-                            </x-slot:type>
-
+                        <x-callout title="Warning" color="warning" class="mt-0">
                             You're browsing the documentation for an old version of Laravel Shopper.
                             Consider upgrading your project to <a href="{{ route('docs.version', DEFAULT_VERSION) }}" class="underline font-heading font-medium">Laravel Shopper {{ DEFAULT_VERSION }}</a>.
                         </x-callout>
                     @endunless
 
                     @if ($currentVersion === 'main' || version_compare($currentVersion, DEFAULT_VERSION) > 0)
-                        <x-callout color="warning">
-                            <x-slot:type>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                                </svg>
-                                Warning
-                            </x-slot:type>
-
-                            You're browsing the documentation for an upcoming version of Laravel Shopper.
+                        <x-callout title="Warning" color="warning" class="mt-0">
+                            You're browsing the documentation for an upcoming version of <strong>Laravel Shopper</strong>.
                             The documentation and features of this release are subject to change.
                         </x-callout>
                     @endif

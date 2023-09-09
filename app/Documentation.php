@@ -144,7 +144,7 @@ final class Documentation
     public static function getDocVersions(): array
     {
         return [
-            'main' => 'Main',
+            // 'main' => 'Main',
             '2.x' => '2.x',
             '1.x' => '1.x',
         ];
