@@ -41,7 +41,7 @@
 
             <div class="min-w-0 max-w-2xl flex-auto px-4 py-12 lg:max-w-none lg:py-20 lg:pl-8 lg:pr-0 xl:px-10">
                 <section class="docs_main max-w-prose lg:max-w-none">
-                    @unless (version_compare($currentVersion, DEFAULT_VERSION) >= 0)
+                    @unless ($currentVersion === 'main' || version_compare($currentVersion, DEFAULT_VERSION) >= 0)
                         <x-callout color="warning">
                             <x-slot:type>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">

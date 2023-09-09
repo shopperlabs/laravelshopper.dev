@@ -21,3 +21,7 @@
     background-color: theme('colors.gray.700');
   }
 }
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
