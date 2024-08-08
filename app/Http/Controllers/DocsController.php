@@ -8,7 +8,6 @@ use App\Documentation;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -25,7 +24,7 @@ final class DocsController extends Controller
         return redirect('docs/'.DEFAULT_VERSION);
     }
 
-    public function index(string $version, Documentation $docs): RedirectResponse | JsonResponse | array
+    public function index(string $version, Documentation $docs): RedirectResponse|JsonResponse|array
     {
         $major = Str::before($version, '.');
 
@@ -93,8 +92,7 @@ final class DocsController extends Controller
         ?string $page,
         ?string $content,
         Collection $headings,
-    ): View | RedirectResponse | Response
-    {
+    ): View|RedirectResponse|Response {
         if (is_null($content)) {
             $otherVersions = $this->docs->versionsContainingPage($page);
 

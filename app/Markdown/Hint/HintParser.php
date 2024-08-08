@@ -24,8 +24,8 @@ final class HintParser extends AbstractBlockContinueParser implements BlockConti
 
     public function __construct()
     {
-        $this->block = new Hint();
-        $this->strings = new ArrayCollection();
+        $this->block = new Hint;
+        $this->strings = new ArrayCollection;
     }
 
     public function getBlock(): Hint
@@ -83,7 +83,7 @@ final class HintParser extends AbstractBlockContinueParser implements BlockConti
         if ($this->strings->count() === 1) {
             $this->block->setLiteral('');
         } else {
-            $this->block->setLiteral(\implode("\n", $this->strings->slice(1)) . "\n");
+            $this->block->setLiteral(\implode("\n", $this->strings->slice(1))."\n");
         }
     }
 }

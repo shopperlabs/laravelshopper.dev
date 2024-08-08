@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace App\Markdown;
 
-use App\Markdown\GithubFlavoredMarkdownExtension;
-use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkRenderer;
-use League\CommonMark\MarkdownConverter;
+use App\Markdown\Extension\TorchlightExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
-use Torchlight\Commonmark\V2\TorchlightExtension;
+use League\CommonMark\MarkdownConverter;
 
 final class GithubFlavoredMarkdownConverter extends MarkdownConverter
 {
     /**
      * Create a new Markdown converter pre-configured for GFM
      *
-     * @param array<string, mixed> $config
+     * @param  array<string, mixed>  $config
      */
     public function __construct()
     {
@@ -43,7 +41,7 @@ final class GithubFlavoredMarkdownConverter extends MarkdownConverter
                     'attributes' => [
                         'class' => 'table-wrapper',
                     ],
-                ]
+                ],
             ],
         ];
 

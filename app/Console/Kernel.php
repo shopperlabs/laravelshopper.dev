@@ -12,7 +12,7 @@ final class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         $schedule->command('sitemap:generate')->daily();
-        $schedule->exec('bash /home/forge/laravelshopper.dev/build/docs.sh')->everyFiveMinutes();
+        $schedule->exec('bash /home/forge/laravelshopper.dev/build/docs.sh')->daily();
     }
 
     protected function commands(): void

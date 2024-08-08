@@ -22,6 +22,6 @@ final class HintStartParser implements BlockStartParserInterface
             return BlockStart::none();
         }
 
-        return BlockStart::of(new HintParser())->at($cursor);
+        return BlockStart::of(new HintParser)->at($cursor);
     }
 }

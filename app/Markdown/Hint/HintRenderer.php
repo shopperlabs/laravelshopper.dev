@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Markdown\Hint;
 
 use League\CommonMark\Node\Node;
@@ -18,7 +20,7 @@ final class HintRenderer implements NodeRendererInterface
         isset($attrs['class']) ? $attrs['class'] .= ' hint' : $attrs['class'] = 'hint';
 
         if ($type = $node->getType()) {
-            $attrs['class'] = $attrs['class'] ? $attrs['class'] . ' ' : '';
+            $attrs['class'] = $attrs['class'] ? $attrs['class'].' ' : '';
             $attrs['class'] .= $type;
         }
 
@@ -44,9 +46,9 @@ final class HintRenderer implements NodeRendererInterface
         return new HtmlElement(
             'div',
             $attrs,
-            "\n" .
-            $title . "\n" .
-            $content .
+            "\n".
+            $title."\n".
+            $content.
             "\n"
         );
     }

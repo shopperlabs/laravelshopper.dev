@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-if ( ! function_exists('isoToEmoji')) {
+if (! function_exists('isoToEmoji')) {
     function isoToEmoji(string $code): string
     {
         return implode(
