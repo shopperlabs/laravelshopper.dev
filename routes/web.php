@@ -5,11 +5,7 @@ declare(strict_types=1);
 use App\Http\Controllers\DocsController;
 use Illuminate\Support\Facades\Route;
 
-if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '1.x');
-}
-
-Route::redirect('/', '/docs', 301);
+Route::view('/', 'home')->name('home');
 
 Route::get('docs', [DocsController::class, 'showRootPage']);
 Route::get('docs/{version}/index.json', [DocsController::class, 'index']);

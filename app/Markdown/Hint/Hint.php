@@ -20,7 +20,8 @@ final class Hint extends AbstractBlock implements StringContainerInterface
         if (count($words) > 1) {
 
             array_shift($words);
-            return join(' ', $words);
+
+            return implode(' ', $words);
         }
 
         if ($words[0] === 'tip') {

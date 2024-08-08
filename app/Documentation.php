@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace App;
 
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Illuminate\Filesystem\Filesystem;
+use App\Enum\Versions;
 use App\Markdown\GithubFlavoredMarkdownConverter;
 use Carbon\CarbonInterval;
 use Illuminate\Contracts\Cache\Repository as Cache;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 final class Documentation
 {
     public function __construct(
         protected Filesystem $files,
         protected Cache $cache,
-    ) {
-    }
+    ) {}
 
     public function getIndex($version): ?string
     {
@@ -26,7 +26,7 @@ final class Documentation
             $path = base_path('resources/docs/'.$version.'/documentation.md');
 
             if ($this->files->exists($path)) {
-                return $this->replaceLinks($version, (new GithubFlavoredMarkdownConverter())
+                return $this->replaceLinks($version, (new GithubFlavoredMarkdownConverter)
                     ->convert($this->files->get($path)));
             }
 
@@ -63,7 +63,7 @@ final class Documentation
             if ($this->files->exists($path)) {
                 $content = $this->files->get($path);
 
-                $content = (new GithubFlavoredMarkdownConverter())->convert($content);
+                $content = (new GithubFlavoredMarkdownConverter)->convert($content);
 
                 return $this->replaceLinks($version, $content);
             }
@@ -103,7 +103,7 @@ final class Documentation
                                 'title' => $page['title'],
                                 'sections' => collect($section['fragments'])
                                     ->combine($section['titles'])
-                                    ->map(fn ($title) => ['title' => $title])
+                                    ->map(fn ($title) => ['title' => $title]),
                             ],
                         ];
                     }),
@@ -136,17 +136,11 @@ final class Documentation
     public function versionsContainingPage(string $page): Collection
     {
         return collect(Documentation::getDocVersions())
-            ->filter(function ($version) use ($page) {
-                return $this->sectionExists($version, $page);
-            });
+            ->filter(fn ($version) => $this->sectionExists($version, $page));
     }
 
     public static function getDocVersions(): array
     {
-        return [
-            // 'main' => 'Main',
-            '2.x' => '2.x',
-            '1.x' => '1.x',
-        ];
+        return Versions::values();
     }
 }
