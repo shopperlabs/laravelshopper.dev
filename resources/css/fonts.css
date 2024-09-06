@@ -1,59 +1,59 @@
 @font-face {
   font-family: 'Euclid Triangle';
-  src: url('../fonts/EuclidTriangle/EuclidTriangle-Light.eot');
-  src: local('Euclid Triangle Light'), local('../fonts/EuclidTriangle/EuclidTriangle-Light'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Light.woff2') format('woff2'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Light.woff') format('woff'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Light.ttf') format('truetype');
+  src: url('./fonts/EuclidTriangle/EuclidTriangle-Light.eot');
+  src: local('Euclid Triangle Light'), local('./fonts/EuclidTriangle/EuclidTriangle-Light'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Light.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Light.woff2') format('woff2'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Light.woff') format('woff'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Euclid Triangle';
-  src: url('../fonts/EuclidTriangle/EuclidTriangle-Regular.eot');
-  src: local('Euclid Triangle Regular'), local('../fonts/EuclidTriangle/EuclidTriangle-Regular'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Regular.woff2') format('woff2'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Regular.woff') format('woff'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Regular.ttf') format('truetype');
+  src: url('./fonts/EuclidTriangle/EuclidTriangle-Regular.eot');
+  src: local('Euclid Triangle Regular'), local('./fonts/EuclidTriangle/EuclidTriangle-Regular'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.woff2') format('woff2'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.woff') format('woff'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Euclid Triangle';
-  src: url('../fonts/EuclidTriangle/EuclidTriangle-Medium.eot');
-  src: local('Euclid Triangle Medium'), local('../fonts/EuclidTriangle/EuclidTriangle-Medium'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Medium.woff2') format('woff2'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Medium.woff') format('woff'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Medium.ttf') format('truetype');
+  src: url('./fonts/EuclidTriangle/EuclidTriangle-Medium.eot');
+  src: local('Euclid Triangle Medium'), local('./fonts/EuclidTriangle/EuclidTriangle-Medium'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.woff2') format('woff2'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.woff') format('woff'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Euclid Triangle';
-  src: url('../fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot');
-  src: local('Euclid Triangle SemiBold'), local('../fonts/EuclidTriangle/EuclidTriangle-SemiBold'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff2') format('woff2'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff') format('woff'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-SemiBold.ttf') format('truetype');
+  src: url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot');
+  src: local('Euclid Triangle SemiBold'), local('./fonts/EuclidTriangle/EuclidTriangle-SemiBold'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff2') format('woff2'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff') format('woff'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Euclid Triangle';
-  src: url('../fonts/EuclidTriangle/EuclidTriangle-Bold.eot');
-  src: local('Euclid Triangle Bold'), local('../fonts/EuclidTriangle/EuclidTriangle-Bold'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Bold.woff2') format('woff2'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Bold.woff') format('woff'),
-  url('../fonts/EuclidTriangle/EuclidTriangle-Bold.ttf') format('truetype');
+  src: url('./fonts/EuclidTriangle/EuclidTriangle-Bold.eot');
+  src: local('Euclid Triangle Bold'), local('./fonts/EuclidTriangle/EuclidTriangle-Bold'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.woff2') format('woff2'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.woff') format('woff'),
+  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
