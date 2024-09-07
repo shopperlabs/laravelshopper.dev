@@ -13,11 +13,6 @@ use League\CommonMark\MarkdownConverter;
 
 final class GithubFlavoredMarkdownConverter extends MarkdownConverter
 {
-    /**
-     * Create a new Markdown converter pre-configured for GFM
-     *
-     * @param  array<string, mixed>  $config
-     */
     public function __construct()
     {
         $config = [
@@ -46,10 +41,10 @@ final class GithubFlavoredMarkdownConverter extends MarkdownConverter
         ];
 
         $environment = new Environment($config);
-        $environment->addExtension(new CommonMarkCoreExtension());
-        $environment->addExtension(new GithubFlavoredMarkdownExtension());
-        $environment->addExtension(new AttributesExtension());
-        $environment->addExtension(new TorchlightExtension());
+        $environment->addExtension(new CommonMarkCoreExtension);
+        $environment->addExtension(new GithubFlavoredMarkdownExtension);
+        $environment->addExtension(new AttributesExtension);
+        $environment->addExtension(new TorchlightExtension);
 
         parent::__construct($environment);
     }

@@ -7,5 +7,5 @@ fi
 
 composer install
 source "$(dirname "$0")/checkout_latest_docs.sh"
-pnpm install
-pnpm build
+yarn install
+yarn build

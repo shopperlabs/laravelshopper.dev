@@ -13,5 +13,5 @@ fi
 
 php artisan key:generate
 source "$(dirname "$0")/checkout_latest_docs.sh"
-pnpm install
-pnpm build
+yarn install
+yarn build

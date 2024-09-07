@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Markdown\Extension;
 
+use Closure;
 use Illuminate\Support\Str;
 use League\CommonMark\Event\DocumentParsedEvent;
 use League\CommonMark\Util\Xml;
@@ -20,9 +23,6 @@ abstract class BaseExtension
      */
     protected $customBlockRenderer;
 
-    /**
-     * @param  DocumentParsedEvent  $event
-     */
     public function onDocumentParsed(DocumentParsedEvent $event): void
     {
         $walker = $event->getDocument()->walker();
@@ -31,7 +31,7 @@ abstract class BaseExtension
             $node = $event->getNode();
 
             // Only look for code nodes, and only process them upon entering.
-            if (!$this->isCodeNode($node) || !$event->isEntering()) {
+            if (! $this->isCodeNode($node) || ! $event->isEntering()) {
                 continue;
             }
 
@@ -60,10 +60,7 @@ abstract class BaseExtension
         return $this;
     }
 
-    /**
-     * @return \Closure
-     */
-    public function defaultBlockRenderer()
+    public function defaultBlockRenderer(): Closure
     {
         return function (Block $block) {
             $inner = '';
@@ -80,24 +77,16 @@ abstract class BaseExtension
         };
     }
 
-    /**
-     * @return array
-     */
-    abstract protected function codeNodes();
+    abstract protected function codeNodes(): array;
 
-    /**
-     * @param $node
-     * @return string
-     */
-    abstract protected function getLiteralContent($node);
+    abstract protected function getLiteralContent($node): string;
 
     /**
      * Bind into a Commonmark V1 or V2 environment.
      *
-     * @param  $environment
      * @param  string  $renderMethod
      */
-    protected function bind($environment, $renderMethod)
+    protected function bind($environment, string $renderMethod): void
     {
         // We start by walking the document immediately after it's parsed
         // to gather all the code blocks and send off our requests.
@@ -111,19 +100,11 @@ abstract class BaseExtension
         }
     }
 
-    /**
-     * @param $node
-     * @return bool
-     */
     protected function isCodeNode($node): bool
     {
         return in_array(get_class($node), $this->codeNodes());
     }
 
-    /**
-     * @param $node
-     * @return Block
-     */
     protected function makeTorchlightBlock($node): Block
     {
         return Block::make()
@@ -133,7 +114,6 @@ abstract class BaseExtension
     }
 
     /**
-     * @param $node
      * @return string
      */
     protected function renderNode($node)
@@ -147,16 +127,12 @@ abstract class BaseExtension
         }
     }
 
-    /**
-     * @param $node
-     * @return string
-     */
     protected function getContent($node): string
     {
         $content = $this->getLiteralContent($node);
 
         // Check for our file loading convention.
-        if (!Str::contains($content, '<<<')) {
+        if (! Str::contains($content, '<<<')) {
             return $content;
         }
 
@@ -174,16 +150,15 @@ abstract class BaseExtension
     }
 
     /**
-     * @param $node
      * @return array|mixed|null
      */
     protected function getInfo($node)
     {
-        if (!$this->isCodeNode($node)) {
+        if (! $this->isCodeNode($node)) {
             return [];
         }
 
-        if (!is_callable([$node, 'getInfoWords'])) {
+        if (! is_callable([$node, 'getInfoWords'])) {
             return [];
         }
 
@@ -192,11 +167,7 @@ abstract class BaseExtension
         return empty($infoWords) ? [] : $infoWords;
     }
 
-    /**
-     * @param $node
-     * @return string|null
-     */
-    protected function getLanguage($node): null | string
+    protected function getLanguage($node): ?string
     {
         $info = $this->getInfo($node);
 
@@ -210,7 +181,6 @@ abstract class BaseExtension
     }
 
     /**
-     * @param $node
      * @return string
      */
     protected function getTheme($node)
