@@ -1,3 +1,0 @@
-# Discounts
-
-Coming Soon...

@@ -17,7 +17,7 @@
 
   h2 {
     &:not(:first-of-type) {
-      @apply border-t border-primary-200 border-dashed pt-12 dark:border-primary-500/20;
+      @apply border-t border-gray-200 border-dashed pt-12 dark:border-white/20;
     }
   }
 

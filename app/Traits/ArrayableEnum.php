@@ -8,6 +8,8 @@ trait ArrayableEnum
 {
     public static function values(): array
     {
-        return array_column(self::cases(), 'value');
+        return collect(self::cases())
+            ->pluck('value', 'value')
+            ->toArray();
     }
 }

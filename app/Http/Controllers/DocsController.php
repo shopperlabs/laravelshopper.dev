@@ -28,7 +28,7 @@ final class DocsController extends Controller
     {
         $major = Str::before($version, '.');
 
-        if (Str::before(array_values(Documentation::getDocVersions())[1], '.') + 1 === (int) $major) {
+        if ((int) Str::before(array_values(Documentation::getDocVersions())[1], '.') + 1 === (int) $major) {
             $version = $major = '2.x';
         }
 
@@ -36,7 +36,7 @@ final class DocsController extends Controller
             return redirect('docs/'.DEFAULT_VERSION.'/index.json', 301);
         }
 
-        if ($major < 2) {
+        if ($major < 1) {
             return [];
         }
 
@@ -49,7 +49,8 @@ final class DocsController extends Controller
             return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
         }
 
-        $sectionPage = $page ?: 'installation';
+        dd($page);
+        $sectionPage = $page ?: 'getting-started';
         $content = $this->docs->get($version, $sectionPage);
         $headings = $this->docs->getTableOfContents($version, $sectionPage);
 
