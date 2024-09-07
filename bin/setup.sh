@@ -6,7 +6,11 @@ if [ ! -f composer.json ]; then
 fi
 
 composer install
-cp .env.example .env
+
+if [ ! -f .env ]; then
+    cp .env.example .env
+fi
+
 php artisan key:generate
 source "$(dirname "$0")/checkout_latest_docs.sh"
 pnpm install
