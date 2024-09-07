@@ -29,7 +29,7 @@ final class DocsController extends Controller
         $major = Str::before($version, '.');
 
         if (Str::before(array_values(Documentation::getDocVersions())[1], '.') + 1 === (int) $major) {
-            $version = $major = 'main';
+            $version = $major = '2.x';
         }
 
         if (! $this->isVersion($version)) {
