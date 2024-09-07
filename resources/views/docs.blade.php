@@ -13,7 +13,7 @@
     />
 
     <div class="relative isolate">
-        <svg class="absolute inset-0 opacity-75 -z-10 h-[10%] dark:hidden w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+        <svg class="absolute inset-0 opacity-30 -z-10 h-[10%] dark:hidden w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
             <defs>
                 <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
                     <path d="M100 200V.5M.5 .5H200" fill="none" />
@@ -24,7 +24,7 @@
             </svg>
             <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
         </svg>
-        <svg class="absolute inset-0 -z-10 h-[10%] opacity-60 w-full hidden dark:block stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+        <svg class="absolute inset-0 -z-10 h-[10%] opacity-30 w-full hidden dark:block stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
             <defs>
                 <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
                     <path d="M.5 200V.5H200" fill="none" />

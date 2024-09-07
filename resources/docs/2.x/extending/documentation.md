@@ -1,6 +1,0 @@
-- ##### Admin Panel
-  - [Overview](/docs/{{version}}/control-panel)
-  - [Navigation](/docs/{{version}}/navigation)
-- ##### Components
-  - [Forms](/docs/{{version}}/forms)
-  - [Modals](/docs/{{version}}/modals)

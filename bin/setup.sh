@@ -9,5 +9,5 @@ composer install
 cp .env.example .env
 php artisan key:generate
 source "$(dirname "$0")/checkout_latest_docs.sh"
-yarn install
-yarn run build
+pnpm install
+pnpm build

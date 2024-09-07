@@ -7,7 +7,7 @@ This is the source of the official [Laravel Shopper][site].
 ## Local Development
 
 If you want to work on this project on your local machine, you may follow the instructions below. 
-These instructions assume you are serving the site using [Laravel Valet](https://laravel.com/docs/valet) out of your `~/Sites` directory:
+These instructions assume you are serving the site using [Laravel Valet](https://laravel.com/docs/valet) or [Laravel Herd](https://herd.laravel.com/) out of your `~/Sites` directory:
 
 1. Fork this repository
 2. Open your terminal and `cd` to your `~/Sites` folder
@@ -16,7 +16,7 @@ These instructions assume you are serving the site using [Laravel Valet](https:/
     git clone git@github.com:{username}/laravelshopper.dev laravelshopper.dev
     ```
 4. CD into the new directory you just created.
-5. Run the `setup.sh` bin script, which will take all the steps necessary to prepare your local install:
+5. Run the `setup.sh` bin script, which will take all the steps necessary to prepare your local installation:
     ```bash
     ./bin/setup.sh
     ```
