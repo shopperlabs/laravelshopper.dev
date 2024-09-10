@@ -1,5 +1,8 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
+import aspectRatio from '@tailwindcss/aspect-ratio'
+import forms from '@tailwindcss/forms'
+import typography from '@tailwindcss/typography'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -17,22 +20,14 @@ export default {
         success: colors.green,
         warning: colors.amber,
         danger: colors.red,
-        ninja: {
-          blue: '#00b1e1',
-          orange: '#f49b0b',
-          red: '#e03a10',
-          purple: '#925aa1',
-          green: '#4c9c23'
-        },
       },
       fontFamily: {
-        sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
-        heading: ['Euclid Triangle', ...defaultTheme.fontFamily.sans],
+        sans: ['Geist', ...defaultTheme.fontFamily.sans],
         mono: ['JetBrains Mono', 'monospace', ...defaultTheme.fontFamily.mono],
         system: defaultTheme.fontFamily.sans,
       },
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '92rem',
       },
       boxShadow: {
         'white': "2px 2px 0 theme('colors.white', 'currentColor')",
@@ -107,9 +102,5 @@ export default {
       }),
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [aspectRatio, forms, typography],
 }

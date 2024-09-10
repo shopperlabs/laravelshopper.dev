@@ -29,7 +29,7 @@ final class DocsController extends Controller
         $major = Str::before($version, '.');
 
         if ((int) Str::before(array_values(Documentation::getDocVersions())[1], '.') + 1 === (int) $major) {
-            $version = $major = '2.x';
+            $version = $major = 'main';
         }
 
         if (! $this->isVersion($version)) {
@@ -49,7 +49,6 @@ final class DocsController extends Controller
             return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
         }
 
-        dd($page);
         $sectionPage = $page ?: 'getting-started';
         $content = $this->docs->get($version, $sectionPage);
         $headings = $this->docs->getTableOfContents($version, $sectionPage);

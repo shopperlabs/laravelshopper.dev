@@ -60,4 +60,5 @@
     }
 
     updateTheme();
+    window.updateTheme = updateTheme;
 </script>

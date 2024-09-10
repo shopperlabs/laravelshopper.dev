@@ -13,5 +13,5 @@
 }
 
 .heading-anchor {
-  @apply mr-2 inline-block align-baseline no-underline shadow-none dark:shadow-none;
+  @apply mr-2 inline-block align-baseline no-underline shadow-none;
 }

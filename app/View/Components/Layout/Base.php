@@ -11,6 +11,6 @@ final class Base extends Component
 {
     public function render(): View
     {
-        return view('layout.base');
+        return view('layouts.base');
     }
 }
