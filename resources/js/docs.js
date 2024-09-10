@@ -1,4 +1,4 @@
-import { toDarkMode, toLightMode, toSystemMode } from './components/theme'
+import { toDarkMode, toLightMode } from './components/theme';
 
 const setupNavCurrentLinkHandling = () => {
   // Can return two, one for mobile nav and one for desktop nav
@@ -14,7 +14,7 @@ const setupNavCurrentLinkHandling = () => {
 
   [...document.querySelectorAll('.sidebar h2')].forEach(el => {
     el.addEventListener('click', (e) => {
-      e.preventDefault()
+      e.preventDefault();
 
       const active = el.parentNode.classList.contains('parent');
 
@@ -25,22 +25,21 @@ const setupNavCurrentLinkHandling = () => {
       }
     });
   });
-}
+};
 
 const addTableWrapper = () => {
-  [...document.querySelectorAll('.main-content .table-wrapper')].forEach(wrapper => {
-    const parentDiv = document.createElement('div')
-    const table = wrapper.querySelector('table')
-    wrapper.classList.add('overflow-x-auto', 'my-6', '-mx-4')
-    parentDiv.setAttribute('class', 'inline-block min-w-full align-middle px-4 py-2')
-    parentDiv.appendChild(table)
-    wrapper.appendChild(parentDiv)
-  })
-}
+  [...document.querySelectorAll('#documentation .table-wrapper')].forEach(wrapper => {
+    const parentDiv = document.createElement('div');
+    const table = wrapper.querySelector('table');
+    wrapper.classList.add('overflow-x-auto', 'my-6', '-mx-4');
+    parentDiv.setAttribute('class', 'inline-block min-w-full align-middle px-4 py-2');
+    parentDiv.appendChild(table);
+    wrapper.appendChild(parentDiv);
+  });
+};
 
-setupNavCurrentLinkHandling()
-addTableWrapper()
+setupNavCurrentLinkHandling();
+addTableWrapper();
 
 window.toDarkMode = toDarkMode;
 window.toLightMode = toLightMode;
-window.toSystemMode = toSystemMode;

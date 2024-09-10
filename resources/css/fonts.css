@@ -1,59 +1,59 @@
 @font-face {
-  font-family: 'Euclid Triangle';
-  src: url('./fonts/EuclidTriangle/EuclidTriangle-Light.eot');
-  src: local('Euclid Triangle Light'), local('./fonts/EuclidTriangle/EuclidTriangle-Light'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Light.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Light.woff2') format('woff2'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Light.woff') format('woff'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Light.ttf') format('truetype');
+  font-family: 'Geist';
+  src: local('Geist Light'), local('./fonts/Geist/Geist-Light'),
+  url('./fonts/Geist/Geist-Light.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-Light.woff') format('woff'),
+  url('./fonts/Geist/Geist-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Euclid Triangle';
-  src: url('./fonts/EuclidTriangle/EuclidTriangle-Regular.eot');
-  src: local('Euclid Triangle Regular'), local('./fonts/EuclidTriangle/EuclidTriangle-Regular'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.woff2') format('woff2'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.woff') format('woff'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Regular.ttf') format('truetype');
+  font-family: 'Geist';
+  src: local('Geist Regular'), local('./fonts/Geist/Geist-Regular'),
+  url('./fonts/Geist/Geist-Regular.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-Regular.woff') format('woff'),
+  url('./fonts/Geist/Geist-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Euclid Triangle';
-  src: url('./fonts/EuclidTriangle/EuclidTriangle-Medium.eot');
-  src: local('Euclid Triangle Medium'), local('./fonts/EuclidTriangle/EuclidTriangle-Medium'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.woff2') format('woff2'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.woff') format('woff'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Medium.ttf') format('truetype');
+  font-family: 'Geist';
+  src: local('Geist Medium'), local('./fonts/Geist/Geist-Medium'),
+  url('./fonts/Geist/Geist-Medium.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-Medium.woff') format('woff'),
+  url('./fonts/Geist/Geist-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Euclid Triangle';
-  src: url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot');
-  src: local('Euclid Triangle SemiBold'), local('./fonts/EuclidTriangle/EuclidTriangle-SemiBold'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff2') format('woff2'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.woff') format('woff'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-SemiBold.ttf') format('truetype');
+  font-family: 'Geist';
+  src: local('Geist SemiBold'), local('./fonts/Geist/Geist-SemiBold'),
+  url('./fonts/Geist/Geist-SemiBold.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-SemiBold.woff') format('woff'),
+  url('./fonts/Geist/Geist-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Euclid Triangle';
-  src: url('./fonts/EuclidTriangle/EuclidTriangle-Bold.eot');
-  src: local('Euclid Triangle Bold'), local('./fonts/EuclidTriangle/EuclidTriangle-Bold'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.woff2') format('woff2'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.woff') format('woff'),
-  url('./fonts/EuclidTriangle/EuclidTriangle-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Geist';
+  src: local('Geist Bold'), local('./fonts/Geist/Geist-Bold'),
+  url('./fonts/Geist/Geist-Bold.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-Bold.woff') format('woff'),
+  url('./fonts/Geist/Geist-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: local('Geist Bold'), local('./fonts/Geist/Geist-Black'),
+  url('./fonts/Geist/Geist-Black.woff2') format('woff2'),
+  url('./fonts/Geist/Geist-Black.woff') format('woff'),
+  url('./fonts/Geist/Geist-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }

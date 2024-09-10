@@ -11,6 +11,6 @@ final class App extends Component
 {
     public function render(): View
     {
-        return view('layout.app');
+        return view('layouts.app');
     }
 }

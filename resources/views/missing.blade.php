@@ -9,9 +9,9 @@
         <ul class="list-custom leading-4 space-y-3">
             @foreach($otherVersions as $key => $title)
                 <li>
-                    <a href="{{ url('/docs/'.$key.'/'.$page) }}">
+                    <x-link href="{{ url('/docs/'.$key.'/'.$page) }}">
                         {{ $title }}
-                    </a>
+                    </x-link>
                 </li>
             @endforeach
         </ul>

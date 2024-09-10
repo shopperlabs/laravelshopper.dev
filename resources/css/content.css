@@ -1,10 +1,10 @@
-.main-content {
+.sh-docs-content {
   overflow-wrap: break-word;
 
   h1 {
     @apply text-4xl lg:text-5xl;
     + p:first-of-type {
-      @apply text-lg leading-normal;
+      @apply leading-normal;
     }
     .anchor {
       display: none;
@@ -24,48 +24,19 @@
   h2 > .anchor,
   h3 > .anchor,
   h4 > .anchor {
-    @apply absolute top-0 no-underline text-white dark:text-gray-900 opacity-0 block;
+    @apply absolute top-0 -left-7 pr-2 no-underline text-white block dark:text-gray-900;
     text-shadow: -1px -1px 0 theme('colors.primary.500'),
     1px -1px 0 theme('colors.primary.500'),
     -1px 1px 0 theme('colors.primary.500'),
     1px 1px 0 theme('colors.primary.500');
     transition: all .2s ease-in-out;
     &:hover {
-      @apply text-primary-500;
+      @apply text-primary-600;
       text-shadow: none;
     }
   }
 
-  h2 {
-    > .anchor {
-      @apply -left-6 pr-2;
-    }
-    &:not(:first-of-type) > .anchor {
-      @apply top-12;
-    }
-    &:hover > .anchor {
-      @apply -left-8 opacity-100;
-    }
-  }
-
-  h3 {
-    > .anchor {
-      @apply -left-3 pr-2;
-    }
-    &:hover > .anchor {
-      @apply -left-5 opacity-100;
-    }
-  }
-
-  h4 {
-    > .anchor {
-      @apply -left-2 pr-2;
-    }
-    &:hover > .anchor {
-      @apply -left-4 opacity-100;
-    }
-  }
-
+  h2:not(:first-of-type) > .anchor { @apply top-12; }
 
   a svg.external {
     @apply inline-block;
@@ -75,33 +46,6 @@
 
   ul, ol {
     @apply mt-4 mb-6;
-  }
-
-  > ul:not([class*="list-"]) {
-    @apply pl-0 list-none mb-6 text-base;
-
-    li {
-      @apply relative pl-6 mb-2;
-
-      &::before {
-        @apply absolute inline-block;
-        content: url('/img/triangle-sky.svg');
-        top: 0;
-        left: 2px;
-      }
-
-      &:nth-child(3n+0)::before {
-        content: url('/img/triangle-pink.svg');
-      }
-
-      &:nth-child(3n+1)::before {
-        content: url('/img/triangle-purple.svg');
-      }
-
-      &:nth-child(3n+2)::before {
-        content: url('/img/triangle-teal.svg');
-      }
-    }
   }
 
   > ol {
@@ -114,52 +58,27 @@
       z-index: 5;
     }
 
-    > li::before {
-      @apply absolute top-0 left-0 mt-px flex items-center justify-center h-6 w-6 bg-primary-500 text-white rounded-full text-sm font-bold font-heading;
-      content: counter(item);
-      counter-increment: item;
-    }
-  }
-
-  > ol.ninja {
-    > li::before {
-      @apply bg-ninja-green;
-      z-index: -2;
-    }
-
-    > li::after {
-      @apply w-6 h-1 absolute top-2 left-0 right-0;
-      content: '';
-      z-index: -1;
-    }
-
-    > li:nth-child(1)::after {
-      @apply bg-ninja-red;
-    }
-
-    > li:nth-child(2)::after {
-      @apply bg-ninja-blue;
-    }
-
-    > li:nth-child(3)::after {
-      @apply bg-ninja-orange;
-    }
-
-    > li:nth-child(4)::after {
-      @apply bg-ninja-purple;
+    > li {
+      &::before {
+        @apply absolute top-0 left-0 mt-px flex items-center justify-center size-6 bg-primary-600 text-white rounded-full text-sm font-semibold;
+        content: counter(item);
+        counter-increment: item;
+      }
+      &::after {
+        @apply absolute top-[calc(1.875rem+1px)] bottom-0 left-[0.6875rem] w-px bg-gray-200 dark:bg-gray-200/5
+      }
     }
   }
 
   table {
-    @apply divide-y divide-gray-200 dark:divide-gray-700 ring-1 ring-gray-200 dark:ring-gray-700 rounded-lg min-w-full my-0;
+    @apply divide-y divide-gray-100 overflow-hidden text-sm ring-1 ring-gray-200 rounded-lg min-w-full my-0 dark:ring-gray-700 dark:divide-gray-700;
 
     thead {
       tr {
-        @apply overflow-hidden bg-gray-50 dark:bg-gray-800;
+        @apply bg-primary-50/50 dark:bg-gray-800;
       }
-
       th {
-        @apply px-3 py-2.5 text-left text-sm font-semibold text-gray-900 dark:text-white rounded-lg;
+        @apply px-3 py-2.5 text-left font-semibold text-gray-900 dark:text-white;
       }
     }
 
@@ -167,7 +86,7 @@
       @apply divide-y divide-gray-200 dark:divide-gray-700;
 
       td {
-        @apply px-3 py-2 text-sm text-gray-700 leading-6 dark:text-gray-300;
+        @apply px-3 py-2 text-gray-700 leading-6 dark:text-gray-300;
 
         code {
           @apply whitespace-nowrap !bg-transparent text-xs md:text-sm font-semibold !text-primary-600 dark:!text-primary-500;
