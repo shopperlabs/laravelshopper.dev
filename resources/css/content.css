@@ -98,11 +98,10 @@
 
 figure,
 .screenshot {
-  @apply bg-primary-100 border border-primary-300 dark:border-primary-400 dark:bg-primary-400/10 p-3 md:p-6 my-16 shadow-stack-sm dark:shadow-primary-900 rounded-lg relative;
-  @apply pb-6 md:pb-12;
+  @apply pointer-events-none relative bg-gradient-to-br from-primary-100 to-primary-500 dark:from-primary-800/50 dark:to-primary-500/50 p-3 md:p-6 my-16 rounded-lg;
 
   img {
-    @apply shadow-lg rounded-lg mx-auto;
+    @apply border border-gray-200 rounded-lg mx-auto dark:border-white/10;
   }
 }
 
@@ -117,20 +116,14 @@ figure figcaption {
 }
 
 .hint {
-  @apply relative bg-gray-50 px-7 pt-7 pb-5 my-20 text-gray-900 border border-gray-300 rounded-md;
+  @apply relative bg-gray-50 leading-6 px-6 py-5 my-20 text-gray-900 border border-gray-300 rounded-lg dark:text-white dark:bg-white/10;
 
   .hint-title {
-    @apply font-sans uppercase bg-gray-700 rounded text-gray-300 inline-block py-1.5 px-2 leading-none absolute -left-4 -top-3 m-0 border-2 border-white -rotate-6 font-semibold tracking-wide dark:border-transparent transition duration-300 ease-in-out;
-  }
-
-  &:hover {
-    .hint-title {
-      @apply rotate-6;
-    }
+    @apply bg-gray-700 text-gray-300 inline-block text-xs py-1.5 px-2 uppercase leading-none absolute -left-4 -top-2 font-semibold tracking-wide transition duration-300 ease-in-out;
   }
 
   &.tip {
-    @apply shadow-stack-primary-sm bg-white text-primary-800 border-primary-600 dark:bg-primary-800/20 dark:border-transparent dark:text-white dark:shadow-primary-900;
+    @apply bg-white text-primary-800 border-primary-600 dark:bg-primary-800/20 dark:border-primary-400/20 dark:text-white;
 
     .hint-title {
       @apply bg-primary-600 text-white ring-1 ring-primary-600;
@@ -138,7 +131,7 @@ figure figcaption {
   }
 
   &.info {
-    @apply shadow-stack-black border-gray-800 dark:bg-gray-400/10 dark:text-gray-400 dark:ring-gray-400/20 dark:shadow-gray-950;
+    @apply border-gray-800 dark:bg-gray-400/10 dark:text-gray-300 dark:ring-gray-400/20;
 
     .hint-title {
       @apply text-white ring-1 ring-gray-800;
@@ -146,7 +139,7 @@ figure figcaption {
   }
 
   &.warning {
-    @apply shadow-stack-warning-sm bg-warning-50 text-warning-900 border-warning-300 dark:bg-warning-400/10 dark:text-warning-500 dark:border-transparent dark:shadow-warning-950;
+    @apply bg-warning-50 text-warning-900 border border-warning-300 dark:bg-warning-400/10 dark:text-warning-500 dark:border-warning-400/20;
 
     .hint-title {
       @apply bg-warning-600 text-white ring-1 ring-warning-600;
@@ -162,7 +155,7 @@ figure figcaption {
   }
 
   &.danger {
-    @apply shadow-stack-danger-sm bg-danger-50 text-danger-900 border border-danger-300 dark:bg-danger-400/10 dark:text-danger-400 dark:border-transparent dark:shadow-danger-950;
+    @apply bg-danger-50 text-danger-800 border border-danger-300 dark:bg-danger-400/10 dark:text-danger-400 dark:border-danger-400/20;
 
     .hint-title {
       @apply bg-danger-600 text-white ring-1 ring-danger-600;
@@ -174,7 +167,7 @@ figure figcaption {
   }
 
   &.best-practice {
-    @apply shadow-stack bg-sky-50 text-black border subpixel-antialiased border-sky-300 dark:bg-sky-400/10 dark:text-sky-400 dark:border-transparent dark:shadow-sky-950;
+    @apply bg-sky-50 text-gray-950 border subpixel-antialiased border-sky-300 dark:bg-sky-400/10 dark:text-sky-400 dark:border-sky-400/20;
 
     .hint-title {
       @apply bg-white text-sky-500 ring-1 ring-sky-600 dark:bg-sky-600 dark:text-white;
@@ -188,6 +181,6 @@ figure figcaption {
   }
 
   :not(.best-practice) code:not(.torchlight) {
-    @apply bg-transparent text-sky-500 font-bold mx-px text-sm;
+    @apply bg-transparent text-sky-500 font-bold mx-px text-sm p-0;
   }
 }

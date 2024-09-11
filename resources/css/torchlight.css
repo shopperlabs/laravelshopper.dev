@@ -3,7 +3,7 @@ pre {
 }
 
 pre code.torchlight {
-  @apply block py-5 min-w-max;
+  @apply block py-5 p-0 min-w-max;
 }
 
 pre code.torchlight .line {
