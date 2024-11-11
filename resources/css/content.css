@@ -116,7 +116,7 @@ figure figcaption {
 }
 
 .hint {
-  @apply relative bg-gray-50 leading-6 px-6 py-5 my-20 text-gray-900 border border-gray-300 rounded-lg dark:text-white dark:bg-white/10;
+  @apply relative bg-gray-50 leading-6 px-6 py-5 my-10 text-gray-900 border border-gray-300 rounded-lg dark:text-white dark:bg-white/10;
 
   .hint-title {
     @apply bg-gray-700 rounded text-gray-300 inline-block text-xs py-1.5 px-2 uppercase leading-none absolute -left-4 -top-2 font-semibold tracking-wide transition duration-300 ease-in-out;

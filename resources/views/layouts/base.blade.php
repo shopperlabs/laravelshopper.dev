@@ -43,9 +43,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @production
-        <!-- Fathom - beautiful, simple website analytics -->
-        <script src="https://cdn.usefathom.com/script.js" data-site="DVMEKBYF" defer></script>
-        <!-- / Fathom -->
+        <!-- Plausible - beautiful, simple website analytics -->
+        <script defer data-domain="laravelshopper.dev" src="https://analytics.fabriceyopa.me/js/script.js"></script>
+        <!-- / Plausible -->
     @endproduction
 
     @include('partials.theme')

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Markdown;
 
+use App\Markdown\Extension\CodeRendererExtension;
 use App\Markdown\Hint\HintExtension;
 use League\CommonMark\Environment\EnvironmentBuilderInterface;
 use League\CommonMark\Extension\Autolink\AutolinkExtension;
@@ -23,5 +24,6 @@ final class GithubFlavoredMarkdownExtension implements ExtensionInterface
         $environment->addExtension(new TaskListExtension);
         $environment->addExtension(new HeadingPermalinkExtension);
         $environment->addExtension(new HintExtension);
+        $environment->addExtension(new CodeRendererExtension);
     }
 }
