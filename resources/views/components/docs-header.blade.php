@@ -1,6 +1,11 @@
-@props(['versions', 'currentVersion', 'currentSection'])
+@props([
+    'versions',
+    'currentVersion',
+    'currentSection',
+])
 
 <x-banner />
+
 <header class="sticky top-0 backdrop-blur-xl z-50 border-b divide-y divide-gray-100 dark:divide-gray-800 border-gray-100 dark:border-gray-800 bg-white/95 dark:bg-gray-900/90">
     <div class="bg-gradient-to-r z-0 absolute h-full w-16 left-0 inset-y-0 dark:from-gray-800"></div>
     <div class="relative z-10 max-w-8xl mx-auto p-4 lg:px-6 flex flex-grow items-center justify-between">
@@ -31,9 +36,8 @@
                 >
                     Extending
                 </x-menu-item>
-                <x-menu-item :href="route('youtube')">Screencasts</x-menu-item>
-                <x-menu-item href="#">Starters kit</x-menu-item>
-                <x-menu-item href="/community">Community</x-menu-item>
+                <x-menu-item href="https://www.youtube.com/@laravelshopper">Screencasts</x-menu-item>
+                <x-menu-item href="https://github.com/shopperlabs/starter-kits">Starters kit</x-menu-item>
             </nav>
         </div>
         <div class="flex items-center gap-3">
@@ -64,7 +68,7 @@
                 </button>
             </div>
             <nav class="hidden lg:flex lg:items-center">
-                <a href="{{ route('github') }}" class="block text-sm leading-6 font-semibold text-gray-700 hover:text-gray-500 dark:hover:text-white dark:text-gray-300">
+                <a href="https://github.com/shopperlabs/shopper" class="block text-sm leading-6 font-semibold text-gray-700 hover:text-gray-500 dark:hover:text-white dark:text-gray-300">
                     <span class="sr-only">GitHub</span>
                     <x-icons.github class="size-5" aria-hidden="true" />
                 </a>

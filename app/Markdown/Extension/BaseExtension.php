@@ -70,7 +70,7 @@ abstract class BaseExtension
             array_unshift($blocks, $block);
 
             foreach ($blocks as $block) {
-                $inner .= "<code {$block->attrsAsString()}class='{$block->classes}' style='{$block->styles}'>{$block->highlighted}</code>";
+                $inner .= "<code {$block->attrsAsString()} class='{$block->classes}' style='{$block->styles}'>{$block->highlighted}</code>";
             }
 
             return "<pre>$inner</pre>";

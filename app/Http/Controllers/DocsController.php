@@ -49,7 +49,7 @@ final class DocsController extends Controller
             return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
         }
 
-        $sectionPage = $page ?: 'getting-started';
+        $sectionPage = $page ?: 'introduction';
         $content = $this->docs->get($version, $sectionPage);
         $headings = $this->docs->getTableOfContents($version, $sectionPage);
 

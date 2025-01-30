@@ -71,7 +71,7 @@
   }
 
   table {
-    @apply divide-y divide-gray-100 overflow-hidden text-sm ring-1 ring-gray-200 rounded-lg min-w-full my-0 dark:ring-gray-700 dark:divide-gray-700;
+    @apply bg-white divide-y divide-gray-200 overflow-hidden text-sm ring-1 ring-gray-200 rounded-lg min-w-full my-0 dark:ring-white/10 dark:divide-white/10 dark:bg-gray-800;
 
     thead {
       tr {
@@ -83,7 +83,7 @@
     }
 
     tbody {
-      @apply divide-y divide-gray-200 dark:divide-gray-700;
+      @apply divide-y divide-gray-200 dark:divide-white/10;
 
       td {
         @apply px-3 py-2 text-gray-700 leading-6 dark:text-gray-300;

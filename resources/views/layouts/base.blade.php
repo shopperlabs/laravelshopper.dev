@@ -30,22 +30,28 @@
     <meta property="og:url" content="https://laravelshopper.dev/">
     <meta property="og:title" content="Laravel Shopper - The E-commerce TALL Stack Framework">
     <meta property="og:description" content="Shopper is a Headless e-commerce administration built with Laravel for Laravel Developers to create & manage online store.">
-    <meta property="og:image" content="https://laravelshopper.dev/img/og-image.jpg">
+    <meta property="og:image" content="https://laravelshopper.dev/img/socialcard.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://laravelshopper.dev/">
     <meta property="twitter:title" content="Laravel Shopper - The E-commerce TALL Stack Framework">
     <meta property="twitter:description" content="Shopper is a Headless e-commerce administration built with Laravel for Laravel Developers to create & manage online store.">
-    <meta property="twitter:image" content="https://laravelshopper.dev/img/og-image.jpg">
+    <meta property="twitter:image" content="https://laravelshopper.dev/img/socialcard.png">
 
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @production
-        <!-- Plausible - beautiful, simple website analytics -->
-        <script defer data-domain="laravelshopper.dev" src="https://analytics.fabriceyopa.me/js/script.js"></script>
-        <!-- / Plausible -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNZ07903B6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-NNZ07903B6');
+        </script>
     @endproduction
 
     @include('partials.theme')

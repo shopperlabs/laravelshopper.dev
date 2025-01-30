@@ -9,7 +9,6 @@ export default {
   darkMode: 'class',
   important: true,
   content: [
-    'resources/views/**/*.blade.php',
     'resources/**/*.{js,md,blade.php}',
   ],
   theme: {

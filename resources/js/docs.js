@@ -4,7 +4,7 @@ const setupNavCurrentLinkHandling = () => {
   // Can return two, one for mobile nav and one for desktop nav
   [...document.querySelectorAll('.sidebar ul')].forEach(nav => {
     const pathLength = window.location.pathname.split('/').length;
-    const current = nav.querySelector('li a[href="' + (pathLength === 3 ? window.location.pathname+"/installation" : window.location.pathname) + '"]');
+    const current = nav.querySelector('li a[href="' + (pathLength === 3 ? window.location.pathname+"/introduction" : window.location.pathname) + '"]');
 
     if (current) {
       current.parentNode.parentNode.parentNode.classList.add('parent');

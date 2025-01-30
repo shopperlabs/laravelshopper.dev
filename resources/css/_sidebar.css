@@ -21,7 +21,7 @@
 
     li {
       a {
-        @apply block border-l-2 pl-4 text-sm -ml-px border-transparent text-gray-500 hover:border-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:border-gray-700;
+        @apply inline-flex items-center gap-2 border-l-2 pl-4 text-sm -ml-px border-transparent text-gray-500 hover:border-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white dark:hover:border-gray-700;
       }
 
       &.active a {
@@ -38,5 +38,11 @@
 .table-of-content {
   .current {
     @apply translate-x-2 font-medium text-primary-500;
+  }
+}
+
+.icon-link {
+  svg {
+    @apply size-4;
   }
 }

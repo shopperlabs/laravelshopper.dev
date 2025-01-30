@@ -95,7 +95,7 @@ final class Documentation
                     ->mapWithKeys(function ($path) {
                         $contents = $this->files->get($path);
 
-                        preg_match('/\# (?<title>[^\\n]+)/', $contents, $page);
+                        preg_match('/# (?<title>[^\n]+)/', $contents, $page);
                         preg_match_all('/<a name="(?<fragments>[^"]+)"><\\/a>\n#+ (?<titles>[^\\n]+)/', $contents, $section);
 
                         return [

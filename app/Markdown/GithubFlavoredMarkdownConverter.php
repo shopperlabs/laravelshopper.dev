@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Markdown;
 
 use App\Markdown\Extension\TorchlightExtension;
+use App\Markdown\Icon\IconExtension;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Environment\EnvironmentInterface;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
@@ -45,6 +46,7 @@ final class GithubFlavoredMarkdownConverter extends MarkdownConverter
         $environment->addExtension(new GithubFlavoredMarkdownExtension);
         $environment->addExtension(new AttributesExtension);
         $environment->addExtension(new TorchlightExtension);
+        $environment->addExtension(new IconExtension);
 
         parent::__construct($environment);
     }
