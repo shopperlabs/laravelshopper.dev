@@ -1,8 +1,9 @@
-@import 'base.css';
-@import 'torchlight.css';
-@import 'fonts.css';
-@import 'content.css';
-@import '_sidebar.css';
+@import './base.css';
+@import './_fonts.css';
+@import './_docs.css';
+@import './_sidebar.css';
+@import './_docsearch.css';
+@import './torchlight.css';
 
 @tailwind base;
 @tailwind components;

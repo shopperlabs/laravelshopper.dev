@@ -70,3 +70,15 @@ pre.torchlight .summary-caret {
 .code-block .copyBtn {
   @apply absolute right-2 top-2 outline-none;
 }
+
+pre code[data-theme='dark'] {
+  @apply hidden;
+}
+
+.dark pre code[data-theme='dark'] {
+  @apply block;
+}
+
+.dark pre code[data-theme='light'] {
+  @apply hidden;
+}
