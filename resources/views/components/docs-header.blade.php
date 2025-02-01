@@ -37,7 +37,6 @@
                     Extending
                 </x-menu-item>
                 <x-menu-item href="https://www.youtube.com/@laravelshopper">Screencasts</x-menu-item>
-                <x-menu-item href="https://github.com/shopperlabs/starter-kits">Starters kit</x-menu-item>
             </nav>
         </div>
         <div class="flex items-center gap-3">
