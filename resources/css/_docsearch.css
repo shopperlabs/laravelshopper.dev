@@ -1,5 +1,4 @@
 @import '@docsearch/css/dist/_variables.css';
-@import '@docsearch/css/dist/modal.css';
 
 :root{--docsearch-primary-color:theme('colors.blue.500');}
 
@@ -126,22 +125,16 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
   display: none;
 }
 
+.DocSearch-VisuallyHiddenForAccessibility {
+  display: none;
+}
+
 .DocSearch-Container--Stalled .DocSearch-MagnifierLabel {
   display: none;
 }
 
 .DocSearch-Input {
-  appearance: none;
-  background: transparent;
-  height: 3.5rem;
-  font-size: 1rem;
-  color: theme('colors.gray.900');
-  margin-left: 0.75rem;
-  margin-right: 1rem;
-  flex: auto;
-  min-width: 0;
-
-  @apply dark:text-gray-200 focus:outline-none;
+  @apply appearance-none shadow-none bg-transparent h-[3.5rem] min-w-0 flex-auto text-base text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-0 border-none focus:border-transparent;
 }
 
 @screen sm {
@@ -299,7 +292,7 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
   }
 
   .DocSearch-Hit[aria-selected='true'] & .DocSearch-Hit-path {
-    @apply bg-sky-400 text-white dark:bg-sky-400/50;
+    @apply bg-blue-400 text-white dark:bg-blue-400/50;
   }
 
   .DocSearch-Hit[aria-selected='true'] & .DocSearch-Hit-title {
@@ -357,7 +350,7 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 }
 
 .DocSearch-Hit[aria-selected='true'] .DocSearch-Hit--Result {
-  @apply bg-sky-500 dark:bg-sky-600;
+  @apply bg-blue-500 dark:bg-blue-600;
 }
 
 .DocSearch-Hit--FirstChild::before {
@@ -370,7 +363,7 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 
 .DocSearch-Hits mark {
   background: none;
-  @apply text-sky-600 font-semibold border-b-2 border-sky-300 dark:text-white dark:border-0;
+  @apply text-blue-600 font-semibold border-b-2 border-blue-300 dark:text-white dark:border-0;
 }
 
 .DocSearch-Hit-path mark {
@@ -383,7 +376,7 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 }
 
 .DocSearch-Footer {
-  @apply flex-none shadow-none flex border-t border-gray-100 py-4 px-6 dark:border-gray-200/5;
+  @apply flex-none shadow-none justify-end flex border-t border-gray-100 py-4 px-6 dark:border-gray-200/5;
 }
 
 .DocSearch-Commands {
@@ -460,7 +453,7 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 }
 
 .DocSearch-NoResults-Prefill-List + .DocSearch-Help a {
-  @apply text-sky-500 font-semibold dark:text-sky-400;
+  @apply text-blue-500 font-semibold dark:text-blue-400;
 }
 
 .DocSearch-Hit-action [title='Save this search'],
@@ -505,11 +498,11 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 }
 
 .DocSearch-Hit-action [title='Remove this search from favorites']::before {
-  @apply absolute inset-0 content-[''] pointer-events-none bg-sky-50 dark:bg-gray-700/30;
+  @apply absolute inset-0 content-[''] pointer-events-none bg-blue-50 dark:bg-gray-700/30;
 }
 
 .DocSearch-Hit[aria-selected='true'] [title='Remove this search from favorites']::before {
-  @apply bg-sky-100 dark:bg-gray-700/40;
+  @apply bg-blue-100 dark:bg-gray-700/40;
 }
 
 .DocSearch-Hit-action [title='Remove this search from favorites']::after {
@@ -547,4 +540,3 @@ html[data-theme=dark]:root{--docsearch-primary-color:theme('colors.blue.500');}
 .DocSearch-Hit-action + .DocSearch-Hit-action {
   @apply ml-3 pl-3 border-l border-gray-200 dark:border-gray-200/5;
 }
-
