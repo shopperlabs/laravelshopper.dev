@@ -40,7 +40,11 @@
     <meta property="twitter:image" content="https://laravelshopper.dev/img/socialcard.png">
 
     @livewireStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite([
+       'resources/css/app.css',
+       'resources/js/app.js',
+       ...request()->is('docs/*') ? ['resources/js/docs.js'] : [],
+   ])
 
     @production
         <!-- Google tag (gtag.js) -->
@@ -56,12 +60,19 @@
 
     @include('partials.theme')
 </head>
-<body x-data="{ navIsOpen: false }"
-      {{ $attributes->twMerge(['min-h-screen font-sans antialiased language-php selection:bg-primary-100/70 dark:selection:bg-white/10 dark:bg-gray-900']) }}
+<body
+    x-data="{ navIsOpen: false }"
+    {{ $attributes->twMerge(['min-h-screen font-sans antialiased language-php selection:bg-primary-100/70 dark:selection:bg-white/10 dark:bg-gray-900']) }}
 >
 
     {{ $slot }}
 
     @livewireScriptConfig
+
+    <script>
+        var algolia_app_id = '{{ config('algolia.connections.main.id', false) }}';
+        var algolia_search_key = '{{ config('algolia.connections.main.search_key', false) }}';
+        var version = '{{ $currentVersion ?? DEFAULT_VERSION }}';
+    </script>
 </body>
 </html>
