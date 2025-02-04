@@ -10,10 +10,10 @@ Alpine.plugin(Focus);
 Alpine.plugin(TableOfContents);
 
 docsearch({
-  container: '#docsearch',
   appId: algolia_app_id,
   apiKey: algolia_search_key,
-  indexName: 'laravel',
+  container: '#docsearch',
+  indexName: 'laravelshopper',
   searchParameters: {
     facetFilters: ['version:' + window.version],
   },

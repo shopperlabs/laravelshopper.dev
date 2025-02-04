@@ -38,7 +38,6 @@
     <meta property="twitter:title" content="Laravel Shopper - The E-commerce TALL Stack Framework">
     <meta property="twitter:description" content="Shopper is a Headless e-commerce administration built with Laravel for Laravel Developers to create & manage online store.">
     <meta property="twitter:image" content="https://laravelshopper.dev/img/socialcard.png">
-    <link rel="preconnect" href="https://{{ config('algolia.connections.main.id') }}-dsn.algolia.net" crossorigin />
 
     @livewireStyles
     @vite([
