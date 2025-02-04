@@ -10,13 +10,10 @@ Alpine.plugin(Focus);
 Alpine.plugin(TableOfContents);
 
 docsearch({
-  appId: algolia_app_id,
-  apiKey: algolia_search_key,
+  appId: '30W3AUXFJE',
+  apiKey: '316f82ff975ee93965438d93552e6f00',
   container: '#docsearch',
   indexName: 'laravelshopper',
-  searchParameters: {
-    facetFilters: ['version:' + window.version],
-  },
 });
 
 Livewire.start();
