@@ -101,8 +101,12 @@ figure,
   @apply pointer-events-none relative bg-gradient-to-br from-primary-100 to-primary-500 dark:from-primary-800/50 dark:to-primary-500/50 p-3 md:p-6 my-16 rounded-lg;
 
   img {
-    @apply border border-gray-200 rounded-lg mx-auto dark:border-white/10;
+    @apply ring ring-gray-100 rounded-lg mx-auto dark:ring-white/10;
   }
+}
+
+.simple-screenshoot {
+  @apply rounded-lg ring-1 ring-gray-100 dark:ring-white/10
 }
 
 .caption,
